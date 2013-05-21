@@ -40,13 +40,13 @@ public class Grafo
 		}
 	}
 
-	public void addVertice(int i)
+	public void addVertice(Integer i)
 	{
 		if (!estaVertice(i)) graf.put(i,new ArrayList<Integer>());
 		else System.out.println("Ya existe ese vertica");
 	}
 
-	public void addArista(int i, int j)
+	public void addArista(Integer i, Integer j)
 	{
 		if (estaVertice(i) && estaVertice(j))
 		{
@@ -61,13 +61,13 @@ public class Grafo
 		return graf.size();
 	}
 
-	public boolean sonAdyacentes(int i, int j)
+	public boolean sonAdyacentes(Integer i, Integer j)
 	{
 		if (estaVertice(i)) return graf.get(i).contains(j);
 		else return false;
 	}
 
-	public boolean estaVertice(int i)
+	public boolean estaVertice(Integer i)
 	{
 		return graf.containsKey(i);
 	}
@@ -77,12 +77,12 @@ public class Grafo
 		return new ArrayList<Integer>(this.graf.keySet());
 	}
 
-	public List<Integer> listaVerticesAdyacentes(int i)
+	public List<Integer> listaVerticesAdyacentes(Integer i)
 	{
 		return new ArrayList<Integer>(this.graf.get(i));
 	}
 
-	public void deleteVertice(int i)
+	public void deleteVertice(Integer i)
 	{
 		if (estaVertice(i))
 		{
@@ -95,7 +95,7 @@ public class Grafo
 		}
 	}
 
-	public void deleteArista(int i, int j)
+	public void deleteArista(Integer i, Integer j)
 	{
 		if (sonAdyacentes(i,j))
 		{

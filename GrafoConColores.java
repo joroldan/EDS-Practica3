@@ -29,7 +29,7 @@ public class GrafoConColores extends Grafo
 		
 	}
 
-	public boolean isValid(int vertice, int color)
+	public boolean isValid(Integer vertice, int color)
 	{
 		if (estaVertice(vertice))
 		{
@@ -43,17 +43,17 @@ public class GrafoConColores extends Grafo
 		else return false;
 	}
 
-	public void setColor(int vertice, int color)
+	public void setColor(Integer vertice, int color)
 	{
 		tablaColores.put(vertice,color);
 	}
 
-	public void removeColor(int i)
+	public void removeColor(Integer i)
 	{
 		tablaColores.remove(i);
 	}
 
-	public Integer getColorVertice(int i)
+	public Integer getColorVertice(Integer i)
 	{
 		return tablaColores.get(i);
 	}
